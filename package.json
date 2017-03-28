@@ -1,0 +1,30 @@
+{
+  "name": "hookspot",
+  "description": "A hook for posting property changes as a note to company pages",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.10.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billykwok/HookSpot.git"
+  },
+  "author": "Billy Kwok <xobkwok@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/billykwok/HookSpot/issues"
+  },
+  "homepage": "https://github.com/billykwok/HookSpot#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "node-fetch": "^1.5.3"
+  },
+  "private": true
+}
