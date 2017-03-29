@@ -80,10 +80,10 @@ app.post('/postPropertyChangesAsNoteToCompanyPage', ({ body }, res) => {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Cap Table:</span> ' + body.properties.latest_capitalization_table.value + '</div>');
   }
   if ('quarterly_startup_health' in body.properties) {
-    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health:</span> ' + body.properties.quarterly_startup_health.label + '</div>');
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health:</span> ' + body.properties.quarterly_startup_health.value + '</div>');
   }
   if ('update_help_me' in body.properties) {
-    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Biggest Problem Area:</span> ' + body.properties.update_help_me.label + '</div>');
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Biggest Problem Area:</span> ' + body.properties.update_help_me.value + '</div>');
   }
   if ('other_comments' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Other Comments:</span> ' + body.properties.other_comments.value + '</div>');
