@@ -62,6 +62,11 @@ app.post('/postPropertyChangesAsNoteToCompanyPage', ({ body }, res) => {
       note += ('<div style=\"margin-left: 8px; margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Valuation Cap:</span> $' + numWithCommas(body.properties.valuation_cap_if_raised_convertible_notes.value) + '</div>');
     }
   }
+  if (body.properties.raised_fund.value === 'No') {
+    if ('valuation_cap_if_no_raise' in body.properties) {
+      note += ('<div style=\"margin-left: 8px; margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Valuation Cap:</span> $' + numWithCommas(body.properties.valuation_cap_if_no_raise.value) + '</div>');
+    }
+  }
   if ('estimated_months_of_runway' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Months of Runway:</span> ' + body.properties.estimated_months_of_runway.value + ' months</div>');
   }
@@ -76,6 +81,12 @@ app.post('/postPropertyChangesAsNoteToCompanyPage', ({ body }, res) => {
   }
   if ('latest_capitalization_table' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Cap Table:</span> ' + body.properties.latest_capitalization_table.value + '</div>');
+  }
+  if ('quarterly_startup_health' in body.properties) {
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health Scale (1min / 5max):</span> ' + body.properties.quarterly_startup_health.value + '</div>');
+  }
+  if ('update_help_me' in body.properties) {
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Biggest Problem Area:</span> ' + body.properties.update_help_me.value + '</div>');
   }
   if ('other_comments' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Other Comments:</span> ' + body.properties.other_comments.value + '</div>');
