@@ -80,7 +80,7 @@ app.post('/postPropertyChangesAsNoteToCompanyPage', ({ body }, res) => {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Cap Table:</span> ' + body.properties.latest_capitalization_table.value + '</div>');
   }
   if ('quarterly_startup_health' in body.properties) {
-    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health:</span> ' + body.properties.quarterly_startup_health.value + '</div>');
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health 1-to-5 Scale:</span> ' + body.properties.quarterly_startup_health.value + '</div>');
   }
   if ('update_help_me' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Biggest Problem Area:</span> ' + body.properties.update_help_me.value + '</div>');
