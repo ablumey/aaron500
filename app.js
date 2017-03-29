@@ -76,17 +76,14 @@ app.post('/postPropertyChangesAsNoteToCompanyPage', ({ body }, res) => {
   if ('current_cash_in_bank' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Cash in Bank:</span> $' + numWithCommas(body.properties.current_cash_in_bank.value) + '</div>');
   }
-  if ('current_headcount' in body.properties) {
-    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Headcount:</span> ' + numWithCommas(body.properties.current_headcount.value) + ' people</div>');
-  }
   if ('latest_capitalization_table' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Cap Table:</span> ' + body.properties.latest_capitalization_table.value + '</div>');
   }
   if ('quarterly_startup_health' in body.properties) {
-    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health Scale (1min / 5max):</span> ' + body.properties.quarterly_startup_health.value + '</div>');
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Startup Health:</span> ' + body.properties.quarterly_startup_health.label + '</div>');
   }
   if ('update_help_me' in body.properties) {
-    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Biggest Problem Area:</span> ' + body.properties.update_help_me.value + '</div>');
+    note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Biggest Problem Area:</span> ' + body.properties.update_help_me.label + '</div>');
   }
   if ('other_comments' in body.properties) {
     note += ('<div style=\"margin-top: 6px;\"><span style=\"color: rgb(120, 120, 120);\">Other Comments:</span> ' + body.properties.other_comments.value + '</div>');
